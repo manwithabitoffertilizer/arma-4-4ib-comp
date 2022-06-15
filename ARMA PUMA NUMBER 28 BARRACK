@@ -1,0 +1,72 @@
+_object0 = createVehicle ["Land_BagFence_01_long_green_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object0 setVectorDirAndUp [[-0.418308,0.907785,-0.0307365],[0.0219709,0.0439422,0.998793]];
+_object0 setPosASL [1673.83,6904.62,25.5321];
+
+
+_object1 = createVehicle ["Land_BagFence_01_round_green_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object1 setVectorDirAndUp [[0.976702,-0.21417,-0.0135876],[0.0239653,0.0459336,0.998657]];
+_object1 setPosASL [1671.86,6902.79,25.6554];
+
+
+_object2 = createVehicle ["UK3CB_MDF_O_M240_High", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object2 setVectorDirAndUp [[-0.562377,0.826532,-0.0239977],[0.021964,0.0439436,0.998792]];
+_object2 setPosASL [1675.07,6902.53,25.6027];
+[_object2, [], [], true] call BIS_fnc_initVehicle;
+
+{_object2 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object2;
+{_object2 addMagazineTurret _x} forEach [["FakeWeapon",[-1],1],["uk3cb_m240_200Rnd_762x51_green",[0],200],["uk3cb_m240_200Rnd_762x51_green",[0],200],["uk3cb_m240_200Rnd_762x51_green",[0],200],["uk3cb_m240_200Rnd_762x51_green",[0],200],["uk3cb_m240_200Rnd_762x51_green",[0],200],["uk3cb_m240_200Rnd_762x51_green",[0],200]];
+_object3 = createVehicle ["CamoNet_BLUFOR_Curator_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object3 setVectorDirAndUp [[-0.265202,-0.963147,0.0448862],[0.0239714,0.0399525,0.998914]];
+_object3 setPosASL [1671.08,6894.33,26.0605];
+
+
+_object4 = createVehicle ["UK3CB_MDF_O_M1025_M2", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object4 setVectorDirAndUp [[-0.00143939,0.998659,-0.0517398],[0.0265763,0.0517597,0.998306]];
+_object4 setPosASL [1673.03,6895.42,25.9583];
+[_object4, ["MDF",1], ["hide_CIP",1,"hide_BFT",1,"hide_snorkel",1,"hide_Antenna",0,"hide_A2_Parts",0,"Hide_A2Bumper",0,"Hide_Brushguard",1], true] call BIS_fnc_initVehicle;
+
+{_object4 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object4;
+{_object4 addMagazineTurret _x} forEach [["uk3cb_mag_100rnd_127x99_green",[0],100],["uk3cb_mag_100rnd_127x99_green",[0],100],["uk3cb_mag_100rnd_127x99_green",[0],100],["uk3cb_mag_100rnd_127x99_green",[0],100],["uk3cb_mag_100rnd_127x99_green",[0],100],["uk3cb_mag_100rnd_127x99_green",[0],100],["uk3cb_mag_100rnd_127x99_green",[0],100],["uk3cb_mag_100rnd_127x99_green",[0],100]];
+_object5 = createVehicle ["UK3CB_MDF_O_Warrior_Cage_Camo", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object5 setVectorDirAndUp [[0.999171,-0.0394828,-0.00990502],[0.00993698,0.000613223,0.999951]];
+_object5 setPosASL [1731.95,6520.97,29.0385];
+[_object5, ["MDF",1], ["showSLATHull",1,"showSLATTurret",1,"showCamonetHull",1,"showCamonetTurret",1,"showBags",0,"showBags2",0,"showTools",0], true] call BIS_fnc_initVehicle;
+
+{_object5 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object5;
+{_object5 addMagazineTurret _x} forEach [["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_APDS_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["UK3CB_6Rnd_30mm_L21A1_HE_green",[0],6],["uk3cb_m240_800Rnd_762x51_green",[0],800],["uk3cb_m240_800Rnd_762x51_green",[0],800],["SmokeLauncherMag",[0,0],2]];
+_object6 = createVehicle ["UK3CB_MDF_O_M113_M2", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object6 setVectorDirAndUp [[0.997514,-0.0704501,-0.00175924],[0.00175517,-0.000119691,0.999998]];
+_object6 setPosASL [1731.37,6540.35,29.0494];
+[_object6, ["MDF",1], ["IFF_Panels_Hide",1,"hatchGunner",0,"Hide_Turret_Armor_Front",0,"Hide_Turret_Armor_Side",0], true] call BIS_fnc_initVehicle;
+
+{_object6 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object6;
+{_object6 addMagazineTurret _x} forEach [["rhs_mag_smokegen",[-1],999],["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],["rhsusf_mag_L8A3_8",[0],8],["rhsusf_mag_L8A3_8",[0],8],["rhsusf_mag_L8A3_8",[0],8],["rhsusf_mag_L8A3_8",[1],8],["rhsusf_mag_L8A3_8",[1],8],["rhsusf_mag_L8A3_8",[1],8]];
+_object7 = createVehicle ["UK3CB_MDF_O_UH1H_M240", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object7 setVectorDirAndUp [[-0.996041,-0.0888964,7.57952e-007],[6.19636e-007,1.58352e-006,1]];
+_object7 setPosASL [1820.13,6509.03,29.0429];
+[_object7, ["MDF",1], [], true] call BIS_fnc_initVehicle;
+
+clearItemCargoGlobal _object7;
+clearWeaponCargoGlobal _object7;
+clearMagazineCargoGlobal _object7;
+clearBackpackCargoGlobal _object7;
+
+{_object7 addItemCargoGlobal _x} forEach [["FirstAidKit",1],["amp_slingload_CargoSling",4]];
+
+{_object7 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object7;
+{_object7 addMagazineTurret _x} forEach [["rhs_LaserFCSMag",[0],99],["rhs_LaserFCSMag",[0],99],["rhs_mag_762x51_M240_200_M80",[1],200],["rhs_mag_762x51_M240_200_M80",[1],200],["rhs_mag_762x51_M240_200_M80",[1],200],["rhs_mag_762x51_M240_200_M80",[1],200],["rhs_mag_762x51_M240_200_M80",[1],200],["rhs_mag_762x51_M240_200_M80",[2],200],["rhs_mag_762x51_M240_200_M80",[2],200],["rhs_mag_762x51_M240_200_M80",[2],200],["rhs_mag_762x51_M240_200_M80",[2],200],["rhs_mag_762x51_M240_200_M80",[2],200]];
+_object8 = createVehicle ["UK3CB_MDF_O_UH1H", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object8 setVectorDirAndUp [[-0.998394,-0.0566512,1.43663e-006],[1.32347e-006,2.03517e-006,1]];
+_object8 setPosASL [1820.71,6489.77,29.0429];
+[_object8, ["MDF",1], [], true] call BIS_fnc_initVehicle;
+
+clearItemCargoGlobal _object8;
+clearWeaponCargoGlobal _object8;
+clearMagazineCargoGlobal _object8;
+clearBackpackCargoGlobal _object8;
+
+{_object8 addItemCargoGlobal _x} forEach [["FirstAidKit",1],["amp_slingload_CargoSling",4]];
+
+{_object8 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object8;
+{_object8 addMagazineTurret _x} forEach [["rhs_LaserFCSMag",[0],99],["rhs_LaserFCSMag",[0],99]];
+
