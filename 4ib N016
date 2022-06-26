@@ -1,0 +1,25 @@
+_object0 = createVehicle ["UK3CB_MDF_O_M240_nest", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object0 setVectorDirAndUp [[-0.266555,0.963819,0.00123647],[0.000329535,-0.00119175,0.999999]];
+_object0 setPosASL [2799.49,6338.64,33.2334];
+[_object0, [], ["CamoNet_Hide",0], true] call BIS_fnc_initVehicle;
+
+{_object0 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object0;
+{_object0 addMagazineTurret _x} forEach [["FakeWeapon",[-1],1],["uk3cb_m240_200Rnd_762x51_green",[0],200],["uk3cb_m240_200Rnd_762x51_green",[0],200],["uk3cb_m240_200Rnd_762x51_green",[0],200],["uk3cb_m240_200Rnd_762x51_green",[0],200],["uk3cb_m240_200Rnd_762x51_green",[0],200]];
+_object1 = createVehicle ["UK3CB_MDF_O_M1025_M2", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object1 setVectorDirAndUp [[-0.000433561,0.999532,0.0305779],[-0.0219907,-0.0305801,0.99929]];
+_object1 setPosASL [2993.08,5943.07,7.0168];
+[_object1, ["MDF",1], ["hide_CIP",1,"hide_BFT",1,"hide_snorkel",1,"hide_Antenna",0,"hide_A2_Parts",0,"Hide_A2Bumper",0,"Hide_Brushguard",1], true] call BIS_fnc_initVehicle;
+
+{_object1 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object1;
+{_object1 addMagazineTurret _x} forEach [["uk3cb_mag_100rnd_127x99_green",[0],100],["uk3cb_mag_100rnd_127x99_green",[0],100],["uk3cb_mag_100rnd_127x99_green",[0],100],["uk3cb_mag_100rnd_127x99_green",[0],100],["uk3cb_mag_100rnd_127x99_green",[0],100],["uk3cb_mag_100rnd_127x99_green",[0],100],["uk3cb_mag_100rnd_127x99_green",[0],100],["uk3cb_mag_100rnd_127x99_green",[0],100]];
+_object2 = createVehicle ["Land_BarGate_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object2 setVectorDirAndUp [[-0.788057,0.615602,0],[0,0,1]];
+_object2 setPosASL [3007.72,5940.42,8.32581];
+
+
+_object3 = createVehicle ["Land_GuardBox_01_green_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object3 setVectorDirAndUp [[-0.76364,0.645643,0],[0,0,1]];
+_object3 setPosASL [3013.45,5946.72,8.51142];
+
+
+
