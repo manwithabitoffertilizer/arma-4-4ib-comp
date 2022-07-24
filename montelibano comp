@@ -1,0 +1,71 @@
+_object0 = createVehicle ["Land_Razorwire_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object0 setVectorDirAndUp [[-0.948206,-0.317657,0],[-0,-0,1]];
+_object0 setPosASL [12786.1,11457,3.68912];
+
+
+_object1 = createVehicle ["Land_Basketball_01_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object1 setVectorDirAndUp [[0.150774,0.80237,0.577469],[0.476159,-0.570864,0.66887]];
+_object1 setPosASL [12913,11415.4,3.94895];
+
+
+_object2 = createVehicle ["Land_Basketball_01_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object2 setVectorDirAndUp [[0.151343,0.801959,0.57789],[0.474847,-0.571734,0.669059]];
+_object2 setPosASL [12914.1,11416.9,3.94896];
+
+
+_object3 = createVehicle ["Land_BurntGarbage_01_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object3 setVectorDirAndUp [[0.916296,0.400502,0],[0,0,1]];
+_object3 setPosASL [12920.5,11444.7,3.43619];
+
+
+_object4 = createVehicle ["Land_GarbageHeap_02_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object4 setVectorDirAndUp [[0,1,0],[0,0,1]];
+_object4 setPosASL [12942.6,11443.4,3.43618];
+
+
+_object5 = createVehicle ["Land_Barricade_01_4m_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object5 setVectorDirAndUp [[0,1,0],[0,0,1]];
+_object5 setPosASL [12987,11160.7,3.43619];
+
+
+_object6 = createVehicle ["Land_Razorwire_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object6 setVectorDirAndUp [[0.114396,-0.993435,0],[0,0,1]];
+_object6 setPosASL [13074.8,11199.7,3.43619];
+
+
+_object7 = createVehicle ["Land_SandbagBarricade_01_half_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object7 setVectorDirAndUp [[-0.448147,0.89396,0],[0,0,1]];
+_object7 setPosASL [13069.8,11207.7,2.98794];
+
+
+_object8 = createVehicle ["Land_SandbagBarricade_01_half_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object8 setVectorDirAndUp [[-0.97115,-0.238469,0],[0,0,1]];
+_object8 setPosASL [13069.4,11205.7,3.03218];
+
+
+_object9 = createVehicle ["Land_Razorwire_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object9 setVectorDirAndUp [[-0.901987,0.423441,0.0843645],[0.0931254,0,0.995654]];
+_object9 setPosASL [13065.2,11219.8,3.38072];
+
+
+_object10 = createVehicle ["Land_Razorwire_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object10 setVectorDirAndUp [[-0.679801,-0.733397,0],[-0,-0,1]];
+_object10 setPosASL [13066.8,11201.6,3.43208];
+
+
+_object11 = createVehicle ["Land_Barricade_01_10m_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object11 setVectorDirAndUp [[0,1,0],[0,0,1]];
+_object11 setPosASL [13111.7,11271.7,3.43619];
+
+
+_object12 = createVehicle ["Land_BagBunker_01_small_green_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object12 setVectorDirAndUp [[0.983052,0.18318,0.00738332],[-0.0204373,0.0694781,0.997374]];
+_object12 setPosASL [13241.8,11184,3.78944];
+
+
+_object13 = createVehicle ["UK3CB_Nest_Jun", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object13 setVectorDirAndUp [[0.000276526,0.999861,-0.0166796],[-0.0165741,0.0166819,0.999723]];
+_object13 setPosASL [13610.6,11410.8,3.71763];
+
+
+
