@@ -1,0 +1,6 @@
+_object0 = createVehicle ["UK3CB_Nest_Jun", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object0 setVectorDirAndUp [[0.000276526,0.999861,-0.0166796],[-0.0165741,0.0166819,0.999723]];
+_object0 setPosASL [13610.6,11410.8,3.71763];
+
+
+
