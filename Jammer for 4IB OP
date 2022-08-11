@@ -1,0 +1,21 @@
+_object0 = createVehicle ["Land_BatteryPack_01_open_olive_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object0 setVectorDirAndUp [[-0.183007,0.982924,0.0191968],[0.0619045,-0.00796648,0.99805]];
+_object0 setPosASL [16285.4,12438.5,29.9718];
+
+
+_object1 = createVehicle ["OmniDirectionalAntenna_01_black_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object1 setVectorDirAndUp [[0.000543466,0.999964,0.00843706],[0.0611895,-0.00845451,0.99809]];
+_object1 setPosASL [16285.4,12437.3,29.9731];
+
+
+_object2 = createVehicle ["Land_PortableServer_01_sand_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object2 setVectorDirAndUp [[0.493393,-0.869079,-0.0355646],[0.0579007,-0.00798084,0.99829]];
+_object2 setPosASL [16284.6,12438.3,30.0152];
+
+
+_object3 = createVehicle ["Land_MultiScreenComputer_01_olive_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object3 setVectorDirAndUp [[-0.865616,-0.498237,0.0496918],[0.0618893,-0.0079831,0.998051]];
+_object3 setPosASL [16285.9,12437.7,29.9337];
+
+
+
