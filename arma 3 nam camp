@@ -1,0 +1,954 @@
+_group0 = createGroup [east, true];
+_group1 = createGroup [east, true];
+_group2 = createGroup [east, true];
+_group3 = createGroup [east, true];
+_group4 = createGroup [east, true];
+_group5 = createGroup [east, true];
+_group6 = createGroup [east, true];
+_group7 = createGroup [east, true];
+_group8 = createGroup [east, true];
+_group9 = createGroup [east, true];
+_group10 = createGroup [east, true];
+
+_object0 = createVehicle ["vn_o_nva_static_zpu4", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object0 setVectorDirAndUp [[0.0688049,0.992049,-0.105375],[0.0337627,0.103249,0.994082]];
+_object0 setPosASL [2894.61,781.556,30.5812];
+[_object0, [], [], true] call BIS_fnc_initVehicle;
+
+{_object0 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object0;
+{_object0 addMagazineTurret _x} forEach [["FakeWeapon",[-1],1],["vn_zpu4_v_4800_mag",[0],4800]];
+_object1 = _group0 createUnit ["vn_o_men_nva_11", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object1 setPosASL [2894.64,780.849,31.8941];
+_object1 setDir 3.96747;
+_object1 setRank "SERGEANT";
+_object1 setSkill 0.5;
+_object1 setUnitPos "Auto";
+_group0 selectLeader _object1;
+['_object1_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    [_unit, [[["vn_rpd","","","",["vn_rpd_100_mag",100],[],""],[],[],["vn_o_uniform_nva_army_11_03",[["vn_o_item_firstaidkit",1],["ACE_EarPlugs",1],["vn_rdg2_mag",1,1]]],["vn_o_vest_03",[["vn_rpd_100_mag",2,100],["vn_t67_grenade_mag",2,1]]],["vn_o_pack_04_rpd_pl",[["vn_o_item_firstaidkit",2],["vn_rpd_100_mag",3,100],["vn_rdg2_mag",2,1],["vn_rg42_grenade_mag",2,1]]],"vn_o_helmet_nva_09","vn_o_scarf_01_04",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]],[]]] call CBA_fnc_setLoadout;
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object1_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object1]] call BIS_fnc_addStackedEventHandler;
+
+
+_object2 = createVehicle ["vn_o_pl_static_dshkm_high_02", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object2 setVectorDirAndUp [[0.000105032,0.999996,0.00295516],[4.34954e-005,-0.00295516,0.999996]];
+_object2 setPosASL [2925.52,782.605,29.9585];
+[_object2, [], [], true] call BIS_fnc_initVehicle;
+
+{_object2 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object2;
+{_object2 addMagazineTurret _x} forEach [["FakeWeapon",[-1],1],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50]];
+_object3 = _group1 createUnit ["vn_o_men_pl_02", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object3 setPosASL [2924.82,782.531,29.9769];
+_object3 setDir 45.0059;
+_object3 setRank "SERGEANT";
+_object3 setSkill 0.5;
+_object3 setUnitPos "Auto";
+['_object3_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object3_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object3]] call BIS_fnc_addStackedEventHandler;
+
+
+_object4 = createVehicle ["vn_o_air_mi2_03_04", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object4 setVectorDirAndUp [[0.00238556,0.999476,0.0322629],[-0.000115493,-0.0322628,0.999479]];
+_object4 setPosASL [2939.58,791.952,29.9899];
+[_object4, [], [], true] call BIS_fnc_initVehicle;
+
+clearItemCargoGlobal _object4;
+clearWeaponCargoGlobal _object4;
+clearMagazineCargoGlobal _object4;
+clearBackpackCargoGlobal _object4;
+
+{_object4 addItemCargoGlobal _x} forEach [["vn_o_item_firstaidkit",2],["vn_b_item_toolkit",1],["amp_slingload_CargoSling",4]];
+{_object4 addWeaponCargoGlobal _x} forEach [["vn_type56",1]];
+{_object4 addMagazineCargoGlobal _x} forEach [["vn_rdg2_mag",8],["vn_rgd5_grenade_mag",4],["vn_type56_t_mag",4]];
+
+{_object4 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object4;
+{_object4 addMagazineTurret _x} forEach [["vn_ns23_v_250_mag",[-1],250],["vn_v_m18r_mag",[-1],12],["vn_v_m127_mag",[-1],24],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100]];
+_object4 setPylonLoadOut [1, "vn_pk_v_twin_3200_left", false, [-1]];
+_object4 setAmmoOnPylon [1, 3200];
+_object4 setPylonLoadOut [2, "vn_pk_v_twin_3200_right", false, [-1]];
+_object4 setAmmoOnPylon [2, 3200];
+_object5 = _group2 createUnit ["vn_o_men_aircrew_01", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object5 setPosASL [2933.48,791.233,29.9814];
+_object5 setDir 318.529;
+_object5 setRank "PRIVATE";
+_object5 setSkill 0.5;
+_object5 setUnitPos "Auto";
+_group2 selectLeader _object5;
+['_object5_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object5_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object5]] call BIS_fnc_addStackedEventHandler;
+
+
+_object6 = _group2 createUnit ["vn_o_men_aircrew_02", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object6 setPosASL [2935.03,793.617,29.9814];
+_object6 setDir 287.145;
+_object6 setRank "SERGEANT";
+_object6 setSkill 0.5;
+_object6 setUnitPos "Auto";
+['_object6_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object6_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object6]] call BIS_fnc_addStackedEventHandler;
+
+
+_object7 = _group2 createUnit ["vn_o_men_aircrew_03", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object7 setPosASL [2934.37,792.438,29.9814];
+_object7 setDir 273.529;
+_object7 setRank "SERGEANT";
+_object7 setSkill 0.5;
+_object7 setUnitPos "Auto";
+['_object7_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object7_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object7]] call BIS_fnc_addStackedEventHandler;
+
+
+_object8 = createVehicle ["UK3CB_CW_SOV_O_LATE_Mi8", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object8 setVectorDirAndUp [[0.00105702,0.998131,0.0610998],[-6.45853e-005,-0.0610998,0.998132]];
+_object8 setPosASL [2939.09,767.419,29.9756];
+[_object8, ["SOV_2",1], ["intake_hide",1,"bench_hide",0,"RearDoors",0], true] call BIS_fnc_initVehicle;
+
+clearItemCargoGlobal _object8;
+clearWeaponCargoGlobal _object8;
+clearMagazineCargoGlobal _object8;
+clearBackpackCargoGlobal _object8;
+
+{_object8 addItemCargoGlobal _x} forEach [["FirstAidKit",1],["amp_slingload_CargoSling",4]];
+
+{_object8 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object8;
+{_object8 addMagazineTurret _x} forEach [["rhs_mag_762x54mm_100",[1],100],["rhs_mag_762x54mm_100",[1],100],["rhs_mag_762x54mm_100",[1],100],["rhs_mag_762x54mm_100",[1],100],["rhs_mag_762x54mm_100",[1],100],["rhs_mag_762x54mm_100",[1],100],["rhs_mag_762x54mm_100",[1],100],["rhs_mag_762x54mm_100",[1],100],["rhs_mag_762x54mm_100",[1],100],["rhs_mag_762x54mm_100",[1],100],["rhs_mag_762x54mm_100",[1],100],["rhs_mag_762x54mm_100",[1],100],["rhs_mag_762x54mm_100",[2],100],["rhs_mag_762x54mm_100",[2],100],["rhs_mag_762x54mm_100",[2],100],["rhs_mag_762x54mm_100",[2],100],["rhs_mag_762x54mm_100",[2],100],["rhs_mag_762x54mm_100",[2],100],["rhs_mag_762x54mm_100",[2],100],["rhs_mag_762x54mm_100",[2],100],["rhs_mag_762x54mm_100",[2],100],["rhs_mag_762x54mm_100",[2],100],["rhs_mag_762x54mm_100",[2],100],["rhs_mag_762x54mm_100",[2],100]];
+_object8 setPylonLoadOut [1, "rhs_ASO2_CMFlare_Chaff_Magazine_x6", false, [-1]];
+_object8 setAmmoOnPylon [1, 96];
+_object9 = _group3 createUnit ["UK3CB_CW_SOV_O_LATE_HELI_PILOT", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object9 setPosASL [2937.49,774.681,29.9814];
+_object9 setDir 81.598;
+_object9 setRank "PRIVATE";
+_object9 setSkill 0.5;
+_object9 setUnitPos "Auto";
+_group3 selectLeader _object9;
+['_object9_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    [_unit, [[["rhs_weap_aks74","rhs_acc_dtk1983","","",["rhs_30Rnd_545x39_7N6_AK",30],[],""],[],[],["UK3CB_CW_SOV_O_LATE_U_H_Pilot_Uniform_01_TTSKO",[["ACE_EarPlugs",1],["rhs_mag_9x18_8_57N181S",1,8],["rhs_mag_rdg2_white",1,1],["rhs_mag_rdg2_black",1,1],["rhs_mag_rgd5",2,1]]],["rhsgref_6b23_khaki",[["ACE_quikclot",2],["ACE_elasticBandage",2],["ACE_packingBandage",2],["ACE_tourniquet",2],["ACE_splint",2],["ACE_morphine",1],["ACE_epinephrine",1],["ACE_adenosine",1],["rhs_30Rnd_545x39_7N6_AK",2,30],["rhs_mag_9x18_8_57N181S",1,8]]],[],"rhs_zsh7a_mike","",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]],[]]] call CBA_fnc_setLoadout;
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object9_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object9]] call BIS_fnc_addStackedEventHandler;
+
+
+_object10 = _group3 createUnit ["UK3CB_CW_SOV_O_LATE_HELI_PILOT", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object10 setPosASL [2945.55,772.63,29.9814];
+_object10 setDir 281.594;
+_object10 setRank "SERGEANT";
+_object10 setSkill 0.5;
+_object10 setUnitPos "Auto";
+['_object10_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    [_unit, [[["rhs_weap_aks74","rhs_acc_dtk1983","","",["rhs_30Rnd_545x39_7N6_AK",30],[],""],[],[],["UK3CB_CW_SOV_O_LATE_U_H_Pilot_Uniform_01_TTSKO",[["ACE_EarPlugs",1],["rhs_mag_9x18_8_57N181S",1,8],["rhs_mag_rdg2_white",1,1],["rhs_mag_rdg2_black",1,1],["rhs_mag_rgd5",2,1]]],["rhsgref_6b23_khaki",[["ACE_quikclot",2],["ACE_elasticBandage",2],["ACE_packingBandage",2],["ACE_tourniquet",2],["ACE_splint",2],["ACE_morphine",1],["ACE_epinephrine",1],["ACE_adenosine",1],["rhs_30Rnd_545x39_7N6_AK",2,30],["rhs_mag_9x18_8_57N181S",1,8]]],[],"rhs_zsh7a_mike_alt","",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]],[]]] call CBA_fnc_setLoadout;
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object10_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object10]] call BIS_fnc_addStackedEventHandler;
+
+
+_object11 = _group3 createUnit ["UK3CB_CW_SOV_O_LATE_HELI_PILOT", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object11 setPosASL [2933.45,772.096,29.9814];
+_object11 setDir 285;
+_object11 setRank "SERGEANT";
+_object11 setSkill 0.5;
+_object11 setUnitPos "Auto";
+['_object11_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    [_unit, [[["rhs_weap_aks74","rhs_acc_dtk1983","","",["rhs_30Rnd_545x39_7N6_AK",30],[],""],[],[],["UK3CB_CW_SOV_O_LATE_U_H_Pilot_Uniform_01_TTSKO",[["ACE_EarPlugs",1],["rhs_mag_9x18_8_57N181S",1,8],["rhs_mag_rdg2_white",1,1],["rhs_mag_rdg2_black",1,1],["rhs_mag_rgd5",2,1]]],["rhsgref_6b23_khaki",[["ACE_quikclot",2],["ACE_elasticBandage",2],["ACE_packingBandage",2],["ACE_tourniquet",2],["ACE_splint",2],["ACE_morphine",1],["ACE_epinephrine",1],["ACE_adenosine",1],["rhs_30Rnd_545x39_7N6_AK",2,30],["rhs_mag_9x18_8_57N181S",1,8]]],[],"rhs_zsh7a_mike_alt","",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]],[]]] call CBA_fnc_setLoadout;
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object11_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object11]] call BIS_fnc_addStackedEventHandler;
+
+
+_object12 = _group3 createUnit ["UK3CB_CW_SOV_O_LATE_HELI_PILOT", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object12 setPosASL [2944.24,773.254,29.9814];
+_object12 setDir 148.824;
+_object12 setRank "SERGEANT";
+_object12 setSkill 0.5;
+_object12 setUnitPos "Auto";
+['_object12_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    [_unit, [[["rhs_weap_aks74","rhs_acc_dtk1983","","",["rhs_30Rnd_545x39_7N6_AK",30],[],""],[],[],["UK3CB_CW_SOV_O_LATE_U_H_Pilot_Uniform_01_TTSKO",[["ACE_EarPlugs",1],["rhs_mag_9x18_8_57N181S",1,8],["rhs_mag_rdg2_white",1,1],["rhs_mag_rdg2_black",1,1],["rhs_mag_rgd5",2,1]]],["rhsgref_6b23_khaki",[["ACE_quikclot",2],["ACE_elasticBandage",2],["ACE_packingBandage",2],["ACE_tourniquet",2],["ACE_splint",2],["ACE_morphine",1],["ACE_epinephrine",1],["ACE_adenosine",1],["rhs_30Rnd_545x39_7N6_AK",2,30],["rhs_mag_9x18_8_57N181S",1,8]]],[],"rhs_zsh7a_mike_alt","",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]],[]]] call CBA_fnc_setLoadout;
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object12_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object12]] call BIS_fnc_addStackedEventHandler;
+
+
+_object13 = createVehicle ["vn_o_air_mi2_05_06", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object13 setVectorDirAndUp [[0.00200292,0.999477,0.0322634],[-0.000101602,-0.0322632,0.999479]];
+_object13 setPosASL [2962.16,767.095,29.9899];
+[_object13, [], [], true] call BIS_fnc_initVehicle;
+
+clearItemCargoGlobal _object13;
+clearWeaponCargoGlobal _object13;
+clearMagazineCargoGlobal _object13;
+clearBackpackCargoGlobal _object13;
+
+{_object13 addItemCargoGlobal _x} forEach [["vn_o_item_firstaidkit",2],["vn_b_item_toolkit",1],["amp_slingload_CargoSling",4]];
+{_object13 addWeaponCargoGlobal _x} forEach [["vn_type56",1]];
+{_object13 addMagazineCargoGlobal _x} forEach [["vn_rdg2_mag",8],["vn_rgd5_grenade_mag",4],["vn_type56_t_mag",4]];
+
+{_object13 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object13;
+{_object13 addMagazineTurret _x} forEach [["vn_ns23_v_250_mag",[-1],250],["vn_v_m18r_mag",[-1],12],["vn_v_m127_mag",[-1],24],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100]];
+_object13 setPylonLoadOut [1, "", false, [0]];
+_object13 setAmmoOnPylon [1, -1];
+_object13 setPylonLoadOut [2, "", false, [0]];
+_object13 setAmmoOnPylon [2, -1];
+_object13 setPylonLoadOut [3, "", false, [0]];
+_object13 setAmmoOnPylon [3, -1];
+_object13 setPylonLoadOut [4, "", false, [0]];
+_object13 setAmmoOnPylon [4, -1];
+_object13 setPylonLoadOut [5, "vn_missile_sa7b_mag_x2", false, [0]];
+_object13 setAmmoOnPylon [5, 2];
+_object13 setPylonLoadOut [6, "vn_missile_sa7b_mag_x2", false, [0]];
+_object13 setAmmoOnPylon [6, 2];
+_object14 = createVehicle ["vn_o_air_mi2_04_05", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object14 setVectorDirAndUp [[-0.00854517,0.999419,0.0329898],[0.000245487,-0.0329889,0.999456]];
+_object14 setPosASL [2963.42,790.701,29.9875];
+[_object14, [], [], true] call BIS_fnc_initVehicle;
+
+clearItemCargoGlobal _object14;
+clearWeaponCargoGlobal _object14;
+clearMagazineCargoGlobal _object14;
+clearBackpackCargoGlobal _object14;
+
+{_object14 addItemCargoGlobal _x} forEach [["vn_o_item_firstaidkit",2],["vn_b_item_toolkit",1],["amp_slingload_CargoSling",4]];
+{_object14 addWeaponCargoGlobal _x} forEach [["vn_type56",1]];
+{_object14 addMagazineCargoGlobal _x} forEach [["vn_rdg2_mag",8],["vn_rgd5_grenade_mag",4],["vn_type56_t_mag",4]];
+
+{_object14 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object14;
+{_object14 addMagazineTurret _x} forEach [["vn_ns23_v_250_mag",[-1],250],["vn_v_m18r_mag",[-1],12],["vn_v_m127_mag",[-1],24],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100],["vn_pk_v_100_mag",[1],100]];
+_object14 setPylonLoadOut [1, "vn_rocket_s5_fl_x16", false, [-1]];
+_object14 setAmmoOnPylon [1, 16];
+_object14 setPylonLoadOut [2, "vn_rocket_s5_fl_x16", false, [-1]];
+_object14 setAmmoOnPylon [2, 16];
+_object15 = createVehicle ["vn_o_pl_static_dshkm_high_02", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object15 setVectorDirAndUp [[2.18847e-005,0.999996,0.00295242],[4.85026e-005,-0.00295242,0.999996]];
+_object15 setPosASL [2983.65,851.91,28.0685];
+[_object15, [], [], true] call BIS_fnc_initVehicle;
+
+{_object15 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object15;
+{_object15 addMagazineTurret _x} forEach [["FakeWeapon",[-1],1],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50]];
+_object16 = _group1 createUnit ["vn_o_men_pl_02", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object16 setPosASL [2983.47,851.616,28.0868];
+_object16 setDir 0.00125391;
+_object16 setRank "SERGEANT";
+_object16 setSkill 0.5;
+_object16 setUnitPos "Auto";
+_group1 selectLeader _object16;
+['_object16_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object16_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object16]] call BIS_fnc_addStackedEventHandler;
+
+
+_object17 = createVehicle ["Land_vn_ruordnance", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object17 setVectorDirAndUp [[1.10426e-005,0.999992,0.00404699],[-1.13507e-007,-0.00404699,0.999992]];
+_object17 setPosASL [3023.77,758.63,27.2545];
+
+
+_object18 = createVehicle ["vn_o_prop_t884_01", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object18 setVectorDirAndUp [[0.000312534,0.999875,0.0157896],[5.07099e-005,-0.0157897,0.999875]];
+_object18 setPosASL [3027.26,756.368,27.2492];
+
+
+_object19 = createVehicle ["Land_vn_ch_mod_c", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object19 setVectorDirAndUp [[0.051652,-0.998665,3.21176e-005],[9.46815e-006,3.26502e-005,1]];
+_object19 setPosASL [3026,756.303,27.2489];
+
+
+_object20 = createVehicle ["Land_vn_ch_mod_c", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object20 setVectorDirAndUp [[0.545857,0.837871,0.00342332],[-1.32247e-005,-0.00407709,0.999992]];
+_object20 setPosASL [3028.81,757.912,27.2516];
+
+
+_object21 = createVehicle ["vn_o_pl_static_dshkm_high_02", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object21 setVectorDirAndUp [[-0.0169941,0.99975,-0.0145022],[0.00620377,0.0146094,0.999874]];
+_object21 setPosASL [3011.05,728.487,34.2917];
+[_object21, [], [], true] call BIS_fnc_initVehicle;
+
+{_object21 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object21;
+{_object21 addMagazineTurret _x} forEach [["FakeWeapon",[-1],1],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50]];
+_object22 = _group1 createUnit ["vn_o_men_pl_02", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object22 setPosASL [3010.34,728.372,34.3164];
+_object22 setDir 44.0263;
+_object22 setRank "SERGEANT";
+_object22 setSkill 0.5;
+_object22 setUnitPos "Auto";
+['_object22_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object22_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object22]] call BIS_fnc_addStackedEventHandler;
+
+
+_object23 = _group4 createUnit ["vn_o_men_aircrew_02", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object23 setPosASL [3029.62,755.35,27.2514];
+_object23 setDir 178.716;
+_object23 setRank "SERGEANT";
+_object23 setSkill 0.5;
+_object23 setUnitPos "Auto";
+['_object23_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    [_unit, [[[],[],["vn_tt33","","","",["vn_tt33_mag",8],[],""],["vn_o_uniform_nva_army_01_03",[["vn_o_item_firstaidkit",1],["vn_tt33_mag",2,8],["vn_rdg2_mag",1,1],["vn_t67_grenade_mag",2,1]]],["vn_o_vest_05",[]],[],"","vn_b_scarf_01_03",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]],[]]] call CBA_fnc_setLoadout;
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object23_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object23]] call BIS_fnc_addStackedEventHandler;
+
+
+_object24 = _group5 createUnit ["vn_o_men_aircrew_03", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object24 setPosASL [3029.96,757.125,27.2514];
+_object24 setDir 180.009;
+_object24 setRank "SERGEANT";
+_object24 setSkill 0.5;
+_object24 setUnitPos "Auto";
+['_object24_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    [_unit, [[[],[],["vn_pm","","","",["vn_pm_mag",8],[],""],["vn_o_uniform_nva_army_01_03",[["ACE_fieldDressing",1],["ACE_packingBandage",1],["ACE_morphine",1],["ACE_tourniquet",1],["vn_pm_mag",2,8],["vn_rdg2_mag",1,1],["vn_t67_grenade_mag",2,1]]],["vn_o_vest_05",[]],[],"vn_o_helmet_shl61_01","vn_o_acc_goggles_02",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]],[]]] call CBA_fnc_setLoadout;
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object24_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object24]] call BIS_fnc_addStackedEventHandler;
+
+
+_object25 = _group5 createUnit ["vn_o_men_aircrew_02", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object25 setPosASL [3032.76,754.647,27.2514];
+_object25 setDir 217.857;
+_object25 setRank "SERGEANT";
+_object25 setSkill 0.5;
+_object25 setUnitPos "Auto";
+['_object25_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    [_unit, [[[],[],["vn_tt33","","","",["vn_tt33_mag",8],[],""],["vn_o_uniform_nva_army_01_03",[["ACE_fieldDressing",1],["ACE_packingBandage",1],["ACE_morphine",1],["ACE_tourniquet",1],["vn_tt33_mag",2,8],["vn_rdg2_mag",1,1],["vn_t67_grenade_mag",2,1]]],["vn_o_vest_05",[]],[],"vn_o_helmet_zsh3_02","",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]],[]]] call CBA_fnc_setLoadout;
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object25_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object25]] call BIS_fnc_addStackedEventHandler;
+
+
+_object26 = _group5 createUnit ["vn_o_men_aircrew_01", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object26 setPosASL [3030.99,756.418,27.2514];
+_object26 setDir 203.67;
+_object26 setRank "PRIVATE";
+_object26 setSkill 0.5;
+_object26 setUnitPos "Auto";
+_group5 selectLeader _object26;
+['_object26_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    [_unit, [[[],[],["vn_pm","","","",["vn_pm_mag",8],[],""],["vn_o_uniform_nva_army_01_03",[["ACE_fieldDressing",1],["ACE_packingBandage",1],["ACE_morphine",1],["ACE_tourniquet",1],["vn_pm_mag",2,8],["vn_rdg2_mag",1,1],["vn_t67_grenade_mag",2,1]]],["vn_o_vest_05",[]],[],"vn_o_helmet_zsh3_01","vn_o_acc_goggles_02",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]],[]]] call CBA_fnc_setLoadout;
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object26_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object26]] call BIS_fnc_addStackedEventHandler;
+
+
+_object27 = createVehicle ["Land_CampingChair_V1_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object27 setVectorDirAndUp [[0.000158816,1,-2.83775e-005],[-1.56819e-005,2.838e-005,1]];
+_object27 setPosASL [3029.96,757.225,27.253];
+
+
+_object28 = createVehicle ["Land_CampingChair_V2_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object28 setVectorDirAndUp [[0.865912,0.500196,1.48345e-005],[-2.20467e-005,8.50856e-006,1]];
+_object28 setPosASL [3031.7,753.839,27.2499];
+
+
+_object29 = createVehicle ["Land_CampingChair_V2_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object29 setVectorDirAndUp [[0.401464,0.915875,-1.23547e-005],[5.93081e-006,1.08897e-005,1]];
+_object29 setPosASL [3031.03,756.509,27.2499];
+
+
+_object30 = createVehicle ["vn_weapon_launcher_sa7b", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object30 setVectorDirAndUp [[-0.70267,-0.711515,0],[0,0,1]];
+_object30 setPosASL [3029.68,753.302,27.25];
+
+
+_object31 = createVehicle ["vn_weapon_launcher_sa7b", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object31 setVectorDirAndUp [[-0.858669,-0.512531,0],[0,0,1]];
+_object31 setPosASL [3029.61,754.383,27.25];
+
+
+_object32 = _group6 createUnit ["UK3CB_CW_SOV_O_EARLY_OFF", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object32 setPosASL [3028.13,753.125,27.2514];
+_object32 setDir 44.6756;
+_object32 setRank "PRIVATE";
+_object32 setSkill 0.5;
+_object32 setUnitPos "Auto";
+_group6 selectLeader _object32;
+['_object32_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    [_unit, [[[],[],["rhs_weap_makarov_pm","","","",["rhs_mag_9x18_8_57N181S",8],[],""],["UK3CB_CW_SOV_O_Early_U_OFFICER_Uniform_01_KHK",[["ACE_EarPlugs",1],["ACE_quikclot",2],["ACE_elasticBandage",1],["ACE_packingBandage",1],["ACE_tourniquet",1],["ACE_splint",1],["ACE_morphine",1],["ACE_epinephrine",1],["ACE_adenosine",1],["rhs_mag_rdg2_white",1,1],["rhs_mag_9x18_8_57N181S",2,8]]],["rhs_vest_commander",[]],[],"rhs_beret_vdv_early","",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""]],[]]] call CBA_fnc_setLoadout;
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object32_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object32]] call BIS_fnc_addStackedEventHandler;
+
+
+_object33 = createVehicle ["Land_RattanChair_01_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object33 setVectorDirAndUp [[-0.000161058,0.999999,0.0015493],[3.43319e-006,-0.0015493,0.999999]];
+_object33 setPosASL [3027.97,757.414,27.2504];
+
+
+_object34 = createVehicle ["Land_ChairPlastic_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object34 setVectorDirAndUp [[0.0935035,-0.995619,5.23702e-005],[-1.05418e-005,5.16106e-005,1]];
+_object34 setPosASL [3031.75,755.109,27.25];
+
+
+_object35 = createVehicle ["vn_gurney_mi2", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object35 setVectorDirAndUp [[-3.81334e-006,0.999994,-0.00348847],[-7.55804e-007,0.00348847,0.999994]];
+_object35 setPosASL [3027.99,754.867,27.2463];
+
+
+_object36 = _group4 createUnit ["vn_o_men_aircrew_01", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object36 setPosASL [3031.24,752.552,27.2514];
+_object36 setDir 330;
+_object36 setRank "PRIVATE";
+_object36 setSkill 0.5;
+_object36 setUnitPos "Auto";
+_group4 selectLeader _object36;
+['_object36_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object36_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object36]] call BIS_fnc_addStackedEventHandler;
+
+
+_object37 = _group4 createUnit ["vn_o_men_aircrew_03", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object37 setPosASL [3030.71,754.032,27.2514];
+_object37 setDir 254.124;
+_object37 setRank "SERGEANT";
+_object37 setSkill 0.5;
+_object37 setUnitPos "Auto";
+['_object37_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object37_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object37]] call BIS_fnc_addStackedEventHandler;
+
+
+_object38 = _group7 createUnit ["vn_o_men_pl_13", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object38 setPosASL [3096.45,775.414,22.8414];
+_object38 setDir 168.615;
+_object38 setRank "PRIVATE";
+_object38 setSkill 0.5;
+_object38 setUnitPos "Middle";
+['_object38_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object38_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object38]] call BIS_fnc_addStackedEventHandler;
+
+
+_object39 = _group7 createUnit ["vn_o_men_pl_01", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object39 setPosASL [3085,774.986,22.8414];
+_object39 setDir 259.398;
+_object39 setRank "CAPTAIN";
+_object39 setSkill 0.5;
+_object39 setUnitPos "Up";
+_group7 selectLeader _object39;
+['_object39_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object39_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object39]] call BIS_fnc_addStackedEventHandler;
+
+
+_object40 = _group7 createUnit ["vn_o_men_pl_01", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object40 setPosASL [3098.73,773.689,22.8414];
+_object40 setDir 251.404;
+_object40 setRank "PRIVATE";
+_object40 setSkill 0.5;
+_object40 setUnitPos "Middle";
+['_object40_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    [_unit, [[["vn_type56","","","",["vn_type56_t_mag",29],[],""],[],["vn_m1895","","","",["vn_m1895_mag",7],[],""],["vn_o_uniform_pl_army_01_11",[["vn_o_item_firstaidkit",1],["vn_type56_t_mag",3,30],["vn_m1895_mag",1,7]]],["vn_o_vest_07",[["vn_m1895_mag",1,7],["vn_rdg2_mag",1,1],["vn_rgd33_grenade_mag",1,1],["vn_t67_grenade_mag",1,1]]],["vn_o_pack_05_type56_pl",[["vn_o_item_firstaidkit",2],["vn_type56_t_mag",8,30],["vn_rdg2_mag",2,1],["vn_rgd5_grenade_mag",2,1],["vn_rkg3_grenade_mag",2,1],["vn_mine_satchel_remote_02_mag",1,1],["vn_mine_punji_01_mag",1,1]]],"vn_o_pl_cap_01_01","",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]],[]]] call CBA_fnc_setLoadout;
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object40_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object40]] call BIS_fnc_addStackedEventHandler;
+
+
+_object41 = _group7 createUnit ["vn_o_men_pl_02", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object41 setPosASL [3098.24,774.602,22.8414];
+_object41 setDir 220.778;
+_object41 setRank "PRIVATE";
+_object41 setSkill 0.5;
+_object41 setUnitPos "Middle";
+['_object41_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object41_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object41]] call BIS_fnc_addStackedEventHandler;
+
+
+_object42 = _group7 createUnit ["vn_o_men_pl_11", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object42 setPosASL [3094.38,770.281,22.8414];
+_object42 setDir 42.5959;
+_object42 setRank "SERGEANT";
+_object42 setSkill 0.5;
+_object42 setUnitPos "Middle";
+['_object42_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    [_unit, [[["vn_rpd","","","",["vn_rpd_100_mag",100],[],""],[],[],["vn_o_uniform_pl_army_03_13",[["vn_o_item_firstaidkit",1],["ACE_EarPlugs",1],["vn_rdg2_mag",1,1]]],["vn_o_vest_03",[["vn_rpd_100_mag",2,100],["vn_rg42_grenade_mag",1,1],["vn_t67_grenade_mag",1,1]]],["vn_o_pack_04_rpd_pl",[["vn_o_item_firstaidkit",2],["vn_rpd_100_mag",3,100],["vn_rdg2_mag",2,1],["vn_rg42_grenade_mag",2,1]]],"vn_o_helmet_nva_08","vn_b_spectacles",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]],[]]] call CBA_fnc_setLoadout;
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object42_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object42]] call BIS_fnc_addStackedEventHandler;
+
+
+_object43 = _group7 createUnit ["vn_o_men_pl_02", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object43 setPosASL [3096.92,769.458,22.8414];
+_object43 setDir 0.559591;
+_object43 setRank "CORPORAL";
+_object43 setSkill 0.5;
+_object43 setUnitPos "Middle";
+['_object43_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    [_unit, [[["vn_sks","","","",["vn_sks_t_mag",10],[],""],[],[],["vn_o_uniform_pl_army_02_11",[["vn_o_item_firstaidkit",1],["vn_sks_t_mag",2,10],["vn_rdg2_mag",1,1],["vn_t67_grenade_mag",1,1],["vn_rgd33_grenade_mag",1,1]]],["vn_o_vest_02",[]],["vn_o_pack_02_sks_pl",[["vn_o_item_firstaidkit",2],["vn_sks_t_mag",10,10],["vn_rdg2_mag",2,1],["vn_t67_grenade_mag",2,1]]],"vn_o_pl_cap_02_01","",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]],[]]] call CBA_fnc_setLoadout;
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object43_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object43]] call BIS_fnc_addStackedEventHandler;
+
+
+_object44 = _group7 createUnit ["vn_o_men_pl_22", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object44 setPosASL [3097.48,771.707,22.8414];
+_object44 setDir 337.4;
+_object44 setRank "PRIVATE";
+_object44 setSkill 0.5;
+_object44 setUnitPos "Middle";
+['_object44_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object44_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object44]] call BIS_fnc_addStackedEventHandler;
+
+
+_object45 = _group7 createUnit ["vn_o_men_pl_08", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object45 setPosASL [3086.1,771.566,22.8414];
+_object45 setDir 302.865;
+_object45 setRank "PRIVATE";
+_object45 setSkill 0.5;
+_object45 setUnitPos "Auto";
+['_object45_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object45_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object45]] call BIS_fnc_addStackedEventHandler;
+
+
+_object46 = _group7 createUnit ["vn_o_men_pl_07", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object46 setPosASL [3099.9,772.296,22.8414];
+_object46 setDir 284.661;
+_object46 setRank "PRIVATE";
+_object46 setSkill 0.5;
+_object46 setUnitPos "Middle";
+['_object46_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object46_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object46]] call BIS_fnc_addStackedEventHandler;
+
+
+_object47 = _group7 createUnit ["vn_o_men_pl_14", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object47 setPosASL [3099.57,771.421,22.8414];
+_object47 setDir 301.775;
+_object47 setRank "PRIVATE";
+_object47 setSkill 0.5;
+_object47 setUnitPos "Middle";
+['_object47_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    [_unit, [[["vn_pps43","","","",["vn_pps_t_mag",35],[],""],["vn_rpg2","","","",["vn_rpg2_mag",1],[],""],[],["vn_o_uniform_pl_army_02_14",[["vn_o_item_firstaidkit",1],["ACE_EarPlugs",1],["vn_pps_t_mag",3,35],["vn_rdg2_mag",1,1],["vn_t67_grenade_mag",1,1]]],["vn_o_vest_01",[["vn_t67_grenade_mag",1,1]]],["vn_o_pack_03_rpg2_pps_pl",[["vn_o_item_firstaidkit",2],["vn_pps_t_mag",6,35],["vn_rpg2_mag",3,1],["vn_rdg2_mag",2,1]]],"vn_o_pl_cap_02_01","vn_o_bandana_b",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]],[]]] call CBA_fnc_setLoadout;
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object47_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object47]] call BIS_fnc_addStackedEventHandler;
+
+
+_object48 = createVehicle ["vn_o_pl_static_dshkm_high_02", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object48 setVectorDirAndUp [[-0.00134735,0.999995,0.00295109],[5.39757e-005,-0.00295102,0.999996]];
+_object48 setPosASL [3140.56,738.396,22.8185];
+[_object48, [], [], true] call BIS_fnc_initVehicle;
+
+{_object48 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object48;
+{_object48 addMagazineTurret _x} forEach [["FakeWeapon",[-1],1],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50],["vn_dshkm_v_50_mag",[0],50]];
+_object49 = _group1 createUnit ["vn_o_men_pl_02", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object49 setPosASL [3142.46,737.286,22.8414];
+_object49 setDir 272.626;
+_object49 setRank "SERGEANT";
+_object49 setSkill 0.5;
+_object49 setUnitPos "Auto";
+['_object49_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object49_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object49]] call BIS_fnc_addStackedEventHandler;
+
+
+_object50 = createVehicle ["vn_sa2", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object50 setVectorDirAndUp [[-0.594361,0.804155,0.00829822],[0.0671693,0.0393578,0.996965]];
+_object50 setPosASL [3162.04,699.871,20.1774];
+[_object50, [], [], true] call BIS_fnc_initVehicle;
+
+{_object50 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object50;
+{_object50 addMagazineTurret _x} forEach [["FakeWeapon",[-1],1],["vn_sa2_mag_x4",[0],4]];
+_object51 = _group8 createUnit ["O_UAV_AI_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object51 setPosASL [3162.04,699.871,22.5088];
+_object51 setDir 323.531;
+_object51 setRank "SERGEANT";
+_object51 setSkill 0.5;
+_object51 setUnitPos "Auto";
+_group8 selectLeader _object51;
+['_object51_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object51_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object51]] call BIS_fnc_addStackedEventHandler;
+
+
+_object52 = createVehicle ["vn_o_static_rsna75", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object52 setVectorDirAndUp [[0.0608763,0.99519,-0.0767542],[0.0668195,0.0726611,0.995116]];
+_object52 setPosASL [3176.52,713.74,18.852];
+[_object52, [], [], true] call BIS_fnc_initVehicle;
+
+{_object52 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object52;
+{_object52 addMagazineTurret _x} forEach [["FakeWeapon",[-1],1],["FakeWeapon",[0],1],["FakeWeapon",[1],1]];
+_object53 = _group9 createUnit ["vn_o_men_nva_01", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object53 setPosASL [3176.52,713.74,24.1356];
+_object53 setDir 3.50045;
+_object53 setRank "SERGEANT";
+_object53 setSkill 0.5;
+_object53 setUnitPos "Auto";
+_group9 selectLeader _object53;
+['_object53_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object53_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object53]] call BIS_fnc_addStackedEventHandler;
+
+
+_object54 = _group9 createUnit ["vn_o_men_nva_01", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object54 setPosASL [3176.52,713.74,24.1356];
+_object54 setDir 3.50045;
+_object54 setRank "SERGEANT";
+_object54 setSkill 0.5;
+_object54 setUnitPos "Auto";
+['_object54_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object54_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object54]] call BIS_fnc_addStackedEventHandler;
+
+
+_object55 = createVehicle ["vn_sa2", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object55 setVectorDirAndUp [[-0.687925,0.725569,0.0176184],[0.0847024,0.0561514,0.994823]];
+_object55 setPosASL [3172.17,701.978,19.4626];
+[_object55, [], [], true] call BIS_fnc_initVehicle;
+
+{_object55 removeMagazineTurret (_x select [0, 2])} forEach magazinesAllTurrets _object55;
+{_object55 addMagazineTurret _x} forEach [["FakeWeapon",[-1],1],["vn_sa2_mag_x4",[0],4]];
+_object56 = _group10 createUnit ["O_UAV_AI_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+_object56 setPosASL [3172.17,701.978,21.789];
+_object56 setDir 316.526;
+_object56 setRank "SERGEANT";
+_object56 setSkill 0.5;
+_object56 setUnitPos "Auto";
+_group10 selectLeader _object56;
+['_object56_nextFrameHandle', 'onEachFrame', {
+    params ["_unit"];
+    _unit call BIN_fnc_CBRNHoseInit;
+    ['_object56_nextFrameHandle', 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;
+}, [_object56]] call BIS_fnc_addStackedEventHandler;
+
+
+
+_group0 setFormation "WEDGE";
+_group0 setBehaviour "AWARE";
+_group0 setCombatMode "YELLOW";
+_group0 setSpeedMode "NORMAL";
+
+_waypoint = [_group0, 0];
+_waypoint setWaypointPosition [[2894,780.534,30.6777], -1];
+_waypoint setWaypointType "MOVE";
+_waypoint setWaypointName "";
+_waypoint setWaypointDescription "";
+_waypoint setWaypointFormation "NO CHANGE";
+_waypoint setWaypointBehaviour "UNCHANGED";
+_waypoint setWaypointCombatMode "NO CHANGE";
+_waypoint setWaypointSpeed "UNCHANGED";
+_waypoint setWaypointTimeout [0,0,0];
+_waypoint setWaypointCompletionRadius 0;
+_waypoint setWaypointStatements ["true",""];
+_waypoint setWaypointScript "";
+
+_group0 setCurrentWaypoint [_group0, 1];
+
+_group1 setFormation "WEDGE";
+_group1 setBehaviour "AWARE";
+_group1 setCombatMode "YELLOW";
+_group1 setSpeedMode "NORMAL";
+
+_waypoint = [_group1, 0];
+_waypoint setWaypointPosition [[3003.34,782.862,28.1946], -1];
+_waypoint setWaypointType "MOVE";
+_waypoint setWaypointName "";
+_waypoint setWaypointDescription "";
+_waypoint setWaypointFormation "NO CHANGE";
+_waypoint setWaypointBehaviour "UNCHANGED";
+_waypoint setWaypointCombatMode "NO CHANGE";
+_waypoint setWaypointSpeed "UNCHANGED";
+_waypoint setWaypointTimeout [0,0,0];
+_waypoint setWaypointCompletionRadius 0;
+_waypoint setWaypointStatements ["true",""];
+_waypoint setWaypointScript "";
+
+_group1 setCurrentWaypoint [_group1, 1];
+
+_group2 setFormation "WEDGE";
+_group2 setBehaviour "AWARE";
+_group2 setCombatMode "YELLOW";
+_group2 setSpeedMode "NORMAL";
+
+_waypoint = [_group2, 0];
+_waypoint setWaypointPosition [[2940.05,793.794,30.02], -1];
+_waypoint setWaypointType "MOVE";
+_waypoint setWaypointName "";
+_waypoint setWaypointDescription "";
+_waypoint setWaypointFormation "NO CHANGE";
+_waypoint setWaypointBehaviour "UNCHANGED";
+_waypoint setWaypointCombatMode "NO CHANGE";
+_waypoint setWaypointSpeed "UNCHANGED";
+_waypoint setWaypointTimeout [0,0,0];
+_waypoint setWaypointCompletionRadius 0;
+_waypoint setWaypointStatements ["true",""];
+_waypoint setWaypointScript "";
+
+_group2 setCurrentWaypoint [_group2, 1];
+
+_group3 setFormation "WEDGE";
+_group3 setBehaviour "AWARE";
+_group3 setCombatMode "YELLOW";
+_group3 setSpeedMode "NORMAL";
+
+_waypoint = [_group3, 0];
+_waypoint setWaypointPosition [[2937.83,769.391,30.02], -1];
+_waypoint setWaypointType "MOVE";
+_waypoint setWaypointName "";
+_waypoint setWaypointDescription "";
+_waypoint setWaypointFormation "NO CHANGE";
+_waypoint setWaypointBehaviour "UNCHANGED";
+_waypoint setWaypointCombatMode "NO CHANGE";
+_waypoint setWaypointSpeed "UNCHANGED";
+_waypoint setWaypointTimeout [0,0,0];
+_waypoint setWaypointCompletionRadius 0;
+_waypoint setWaypointStatements ["true",""];
+_waypoint setWaypointScript "";
+
+_group3 setCurrentWaypoint [_group3, 1];
+
+_group4 setFormation "WEDGE";
+_group4 setBehaviour "AWARE";
+_group4 setCombatMode "YELLOW";
+_group4 setSpeedMode "NORMAL";
+
+_waypoint = [_group4, 0];
+_waypoint setWaypointPosition [[2950.4,773.399,29.98], -1];
+_waypoint setWaypointType "MOVE";
+_waypoint setWaypointName "";
+_waypoint setWaypointDescription "";
+_waypoint setWaypointFormation "NO CHANGE";
+_waypoint setWaypointBehaviour "UNCHANGED";
+_waypoint setWaypointCombatMode "NO CHANGE";
+_waypoint setWaypointSpeed "UNCHANGED";
+_waypoint setWaypointTimeout [0,0,0];
+_waypoint setWaypointCompletionRadius 0;
+_waypoint setWaypointStatements ["true",""];
+_waypoint setWaypointScript "";
+
+_group4 setCurrentWaypoint [_group4, 1];
+
+_group5 setFormation "WEDGE";
+_group5 setBehaviour "AWARE";
+_group5 setCombatMode "YELLOW";
+_group5 setSpeedMode "NORMAL";
+
+_waypoint = [_group5, 0];
+_waypoint setWaypointPosition [[2962.71,789.83,30.02], -1];
+_waypoint setWaypointType "MOVE";
+_waypoint setWaypointName "";
+_waypoint setWaypointDescription "";
+_waypoint setWaypointFormation "NO CHANGE";
+_waypoint setWaypointBehaviour "UNCHANGED";
+_waypoint setWaypointCombatMode "NO CHANGE";
+_waypoint setWaypointSpeed "UNCHANGED";
+_waypoint setWaypointTimeout [0,0,0];
+_waypoint setWaypointCompletionRadius 0;
+_waypoint setWaypointStatements ["true",""];
+_waypoint setWaypointScript "";
+
+_group5 setCurrentWaypoint [_group5, 1];
+
+_group6 setFormation "WEDGE";
+_group6 setBehaviour "AWARE";
+_group6 setCombatMode "YELLOW";
+_group6 setSpeedMode "NORMAL";
+
+_waypoint = [_group6, 0];
+_waypoint setWaypointPosition [[3028.9,753.835,27.25], -1];
+_waypoint setWaypointType "MOVE";
+_waypoint setWaypointName "";
+_waypoint setWaypointDescription "";
+_waypoint setWaypointFormation "NO CHANGE";
+_waypoint setWaypointBehaviour "UNCHANGED";
+_waypoint setWaypointCombatMode "NO CHANGE";
+_waypoint setWaypointSpeed "UNCHANGED";
+_waypoint setWaypointTimeout [0,0,0];
+_waypoint setWaypointCompletionRadius 0;
+_waypoint setWaypointStatements ["true",""];
+_waypoint setWaypointScript "";
+
+_group6 setCurrentWaypoint [_group6, 1];
+
+_group7 setFormation "WEDGE";
+_group7 setBehaviour "SAFE";
+_group7 setCombatMode "YELLOW";
+_group7 setSpeedMode "LIMITED";
+
+_waypoint = [_group7, 0];
+_waypoint setWaypointPosition [[3068.67,727.188,23.5953], -1];
+_waypoint setWaypointType "MOVE";
+_waypoint setWaypointName "";
+_waypoint setWaypointDescription "";
+_waypoint setWaypointFormation "NO CHANGE";
+_waypoint setWaypointBehaviour "UNCHANGED";
+_waypoint setWaypointCombatMode "NO CHANGE";
+_waypoint setWaypointSpeed "UNCHANGED";
+_waypoint setWaypointTimeout [0,0,0];
+_waypoint setWaypointCompletionRadius 0;
+_waypoint setWaypointStatements ["true",""];
+_waypoint setWaypointScript "";
+
+_waypoint = _group7 addWaypoint [[0, 0, 0], -1];
+_waypoint setWaypointPosition [[3095.63,775.625,22.84], -1];
+_waypoint setWaypointType "SENTRY";
+_waypoint setWaypointName "";
+_waypoint setWaypointDescription "";
+_waypoint setWaypointFormation "NO CHANGE";
+_waypoint setWaypointBehaviour "UNCHANGED";
+_waypoint setWaypointCombatMode "NO CHANGE";
+_waypoint setWaypointSpeed "UNCHANGED";
+_waypoint setWaypointTimeout [0,0,0];
+_waypoint setWaypointCompletionRadius 0;
+_waypoint setWaypointStatements ["true","
+    if (local this) then {
+        {
+            _x enableAI 'ANIM';
+            _x enableAI 'PATH';
+            [_x, '', 2] call lambs_main_fnc_doAnimation;
+        } foreach thisList;
+    };"];
+_waypoint setWaypointScript "";
+
+_waypoint = _group7 addWaypoint [[0, 0, 0], -1];
+_waypoint setWaypointPosition [[3068.13,785.625,24.08], -1];
+_waypoint setWaypointType "HOLD";
+_waypoint setWaypointName "";
+_waypoint setWaypointDescription "";
+_waypoint setWaypointFormation "NO CHANGE";
+_waypoint setWaypointBehaviour "UNCHANGED";
+_waypoint setWaypointCombatMode "NO CHANGE";
+_waypoint setWaypointSpeed "UNCHANGED";
+_waypoint setWaypointTimeout [0,0,0];
+_waypoint setWaypointCompletionRadius 0;
+_waypoint setWaypointStatements ["true",""];
+_waypoint setWaypointScript "";
+
+_group7 setCurrentWaypoint [_group7, 1];
+
+_group8 setFormation "WEDGE";
+_group8 setBehaviour "CARELESS";
+_group8 setCombatMode "YELLOW";
+_group8 setSpeedMode "NORMAL";
+
+_waypoint = [_group8, 0];
+_waypoint setWaypointPosition [[3161.89,699.799,20.146], -1];
+_waypoint setWaypointType "MOVE";
+_waypoint setWaypointName "";
+_waypoint setWaypointDescription "";
+_waypoint setWaypointFormation "NO CHANGE";
+_waypoint setWaypointBehaviour "UNCHANGED";
+_waypoint setWaypointCombatMode "NO CHANGE";
+_waypoint setWaypointSpeed "UNCHANGED";
+_waypoint setWaypointTimeout [0,0,0];
+_waypoint setWaypointCompletionRadius 0;
+_waypoint setWaypointStatements ["true",""];
+_waypoint setWaypointScript "";
+
+_group8 setCurrentWaypoint [_group8, 1];
+
+_group9 setFormation "WEDGE";
+_group9 setBehaviour "AWARE";
+_group9 setCombatMode "YELLOW";
+_group9 setSpeedMode "NORMAL";
+
+_waypoint = [_group9, 0];
+_waypoint setWaypointPosition [[3176.58,713.756,18.7543], -1];
+_waypoint setWaypointType "MOVE";
+_waypoint setWaypointName "";
+_waypoint setWaypointDescription "";
+_waypoint setWaypointFormation "NO CHANGE";
+_waypoint setWaypointBehaviour "UNCHANGED";
+_waypoint setWaypointCombatMode "NO CHANGE";
+_waypoint setWaypointSpeed "UNCHANGED";
+_waypoint setWaypointTimeout [0,0,0];
+_waypoint setWaypointCompletionRadius 0;
+_waypoint setWaypointStatements ["true",""];
+_waypoint setWaypointScript "";
+
+_group9 setCurrentWaypoint [_group9, 1];
+
+_group10 setFormation "WEDGE";
+_group10 setBehaviour "CARELESS";
+_group10 setCombatMode "YELLOW";
+_group10 setSpeedMode "NORMAL";
+
+_waypoint = [_group10, 0];
+_waypoint setWaypointPosition [[3170.81,702.188,19.3817], -1];
+_waypoint setWaypointType "MOVE";
+_waypoint setWaypointName "";
+_waypoint setWaypointDescription "";
+_waypoint setWaypointFormation "NO CHANGE";
+_waypoint setWaypointBehaviour "UNCHANGED";
+_waypoint setWaypointCombatMode "NO CHANGE";
+_waypoint setWaypointSpeed "UNCHANGED";
+_waypoint setWaypointTimeout [0,0,0];
+_waypoint setWaypointCompletionRadius 0;
+_waypoint setWaypointStatements ["true",""];
+_waypoint setWaypointScript "";
+
+_group10 setCurrentWaypoint [_group10, 1];
+
+
+_object1 moveInGunner _object0;
+_object3 moveInGunner _object2;
+_object16 moveInGunner _object15;
+_object22 moveInGunner _object21;
+_object51 moveInGunner _object50;
+_object53 moveInGunner _object52;
+_object54 moveInCommander _object52;
+_object56 moveInGunner _object55;
+
+_marker = createMarker ["bis_o2_1834", [4768.07,1097.86,0]];
+_marker setMarkerDir 0;
+_marker setMarkerType "respawn_inf";
+_marker setMarkerShape "ICON";
+_marker setMarkerSize [1,1];
+_marker setMarkerText "";
+_marker setMarkerBrush "Solid";
+_marker setMarkerColor "ColorWEST";
+_marker setMarkerAlpha 1;
+
+
